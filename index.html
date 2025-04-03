@@ -4,56 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mateo Díaz Valdez - Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: "#202123",
-                        secondary: "#343541",
-                        accent: "#4A4D55",
-                        text: "#E0E0E0"
-                    }
-                }
-            }
+    <style>
+        body {
+            background-color: #202123;
+            color: #E0E0E0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-    </script>
+        header {
+            background-color: #343541;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background-color: #343541;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-in-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .section.hidden {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        .section:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+        }
+        a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+    </style>
 </head>
-<body class="bg-primary text-text">
-    <header class="bg-secondary text-white py-6 text-center">
-        <h1 class="text-3xl font-bold">Mateo Díaz Valdez</h1>
-        <p class="text-lg">Estudiante de Gestión de Tecnologías de la Información | En proceso de convertirme en desarrollador</p>
+<body>
+    <header>
+        <h1>Mateo Díaz Valdez</h1>
+        <p>Estudiante de Gestión de Tecnologías de la Información | En proceso de convertirme en desarrollador</p>
     </header>
-    
-    <div class="container mx-auto px-6 py-10">
-        <section id="sobre-mi" class="mb-10 bg-secondary p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Sobre Mí</h2>
+    <div class="container">
+        <div class="section" id="sobre-mi">
+            <h2>Sobre Mí</h2>
             <p>Soy Mateo Díaz Valdez, tengo 19 años y vivo en Buenos Aires, Argentina. Estoy en el segundo año de la carrera Gestión de Tecnologías de la Información en UADE.</p>
-            <p>Desde 2024, vivo en la Casa Universitaria San José. Durante mi infancia y adolescencia, exploré diferentes disciplinas como la música, la robótica y el deporte. Estudié música durante 2 años y toco el bajo. También participé en competencias de robótica, incluyendo la First Lego League, donde obtuvimos el segundo puesto en mi primera participación. Además, jugué al rugby desde los 10 años hasta los 19, lo que me permitió desarrollar habilidades de trabajo en equipo y disciplina.</p>
-        </section>
-        
-        <section id="habilidades" class="mb-10 bg-secondary p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Habilidades</h2>
-            <ul class="list-disc pl-5">
+            <p>Desde 2024, vivo en la Casa Universitaria San José. Durante mi infancia y adolescencia, exploré diferentes disciplinas como la música, la robótica y el deporte. Estudié música durante 2 años y toco el bajo. También participé en competencias de robótica, incluyendo la First Lego League, donde obtuvimos el segundo puesto en mi primera participación. Jugué al rugby desde los 10 años hasta los 19.</p>
+        </div>
+        <div class="section" id="habilidades">
+            <h2>Habilidades</h2>
+            <ul>
                 <li>HTML, CSS, JavaScript, Bootstrap</li>
                 <li>Python, C#, C++</li>
                 <li>Gestión de Proyectos y Metodologías Ágiles</li>
                 <li>Trabajo en equipo y resolución de problemas</li>
             </ul>
-        </section>
-        
-        <section id="proyectos" class="mb-10 bg-secondary p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Proyectos</h2>
+        </div>
+        <div class="section" id="proyectos">
+            <h2>Proyectos</h2>
             <p>Actualmente no cuento con proyectos terminados, pero estoy en proceso de aprendizaje y desarrollo de nuevas ideas.</p>
-        </section>
-        
-        <section id="contacto" class="bg-secondary p-6 rounded-lg shadow-md">
-            <h2 class="text-2xl font-semibold mb-3">Contacto</h2>
-            <p>Email: <a href="mailto:diazvaldez.mateo@gmail.com" class="text-blue-400">diazvaldez.mateo@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank" class="text-blue-400">Mateo Díaz Valdez</a></p>
-            <p>GitHub: <a href="https://github.com/mateodiazvaldez" target="_blank" class="text-blue-400">mateodiazvaldez</a></p>
-        </section>
+        </div>
+        <div class="section" id="contacto">
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:diazvaldez.mateo@gmail.com">diazvaldez.mateo@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank">Mateo Díaz Valdez</a></p>
+            <p>GitHub: <a href="https://github.com/mateodiazvaldez" target="_blank">mateodiazvaldez</a></p>
+        </div>
     </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const sections = document.querySelectorAll(".section");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        entry.target.classList.remove("hidden");
+                    } else {
+                        entry.target.classList.add("hidden");
+                        entry.target.classList.remove("visible");
+                    }
+                });
+            }, { threshold: 0.2 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
 </body>
 </html>
