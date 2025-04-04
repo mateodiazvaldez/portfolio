@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,16 +13,19 @@
             margin: 0;
             padding: 0;
         }
+
         header {
             background-color: #343541;
             text-align: center;
             padding: 20px;
         }
+
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
         }
+
         .section {
             background-color: #343541;
             padding: 20px;
@@ -32,25 +36,30 @@
             transform: translateY(50px);
             transition: all 0.6s ease-in-out;
         }
+
         .section.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
         .section.hidden {
             opacity: 0;
             transform: translateY(50px);
         }
+
         .section:hover {
             transform: scale(1.05);
             box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
             transition: all 0.3s ease-in-out;
         }
+
         a {
             color: #4A90E2;
             text-decoration: none;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Mateo Díaz Valdez</h1>
@@ -59,8 +68,11 @@
     <div class="container">
         <div class="section" id="sobre-mi">
             <h2>Sobre Mí</h2>
-            <p>Soy Mateo Díaz Valdez, tengo 19 años y vivo en Buenos Aires, Argentina. Estoy en el segundo año de la carrera Gestión de Tecnologías de la Información en UADE.</p>
-            <p>Desde 2024, vivo en la Casa Universitaria San José. Durante mi infancia y adolescencia, exploré diferentes disciplinas como la música, la robótica y el deporte. Estudié música durante 2 años y toco el bajo. También participé en competencias de robótica, incluyendo la First Lego League, donde obtuvimos el segundo puesto en mi primera participación. Jugué al rugby desde los 10 años hasta los 19.</p>
+            <p>Soy Mateo Díaz Valdez, tengo 19 años y vivo en Buenos Aires, Argentina. Estoy en el segundo año de la
+                carrera Gestión de Tecnologías de la Información en UADE.</p>
+            <p>Desde 2024, vivo en la Casa Universitaria San José. Durante mi infancia y adolescencia, exploré
+                diferentes disciplinas como la música, la robótica y el deporte. Estudié música durante 2 años, toco el
+                bajo, participé en competencias de robótica a lo largo de mi infancia y jugué al rugby durante casi una decada.</p>
         </div>
         <div class="section" id="habilidades">
             <h2>Habilidades</h2>
@@ -69,16 +81,19 @@
                 <li>Python, C#, C++</li>
                 <li>Gestión de Proyectos y Metodologías Ágiles</li>
                 <li>Trabajo en equipo y resolución de problemas</li>
+                <li>Testting y automatizaciones de QA</li>
             </ul>
         </div>
         <div class="section" id="proyectos">
             <h2>Proyectos</h2>
-            <p>Actualmente no cuento con proyectos terminados, pero estoy en proceso de aprendizaje y desarrollo de nuevas ideas.</p>
+            <p>Actualmente no cuento con proyectos terminados, pero estoy en proceso de aprendizaje y desarrollo de
+                nuevas ideas.</p>
         </div>
         <div class="section" id="contacto">
             <h2>Contacto</h2>
             <p>Email: <a href="mailto:diazvaldez.mateo@gmail.com">diazvaldez.mateo@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank">Mateo Díaz Valdez</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank">Mateo Díaz
+                    Valdez</a></p>
             <p>GitHub: <a href="https://github.com/mateodiazvaldez" target="_blank">mateodiazvaldez</a></p>
         </div>
     </div>
@@ -96,11 +111,12 @@
                     }
                 });
             }, { threshold: 0.2 });
-            
+
             sections.forEach(section => {
                 observer.observe(section);
             });
         });
     </script>
 </body>
+
 </html>
