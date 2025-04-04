@@ -29,7 +29,7 @@
         .section {
             background-color: #343541;
             padding: 20px;
-            margin: 20px 0;
+            margin: 20px 20px;
             border-radius: 8px;
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             opacity: 0;
@@ -57,6 +57,11 @@
             color: #4A90E2;
             text-decoration: none;
         }
+        
+        .hyc{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     </style>
 </head>
 
@@ -74,23 +79,27 @@
                 diferentes disciplinas como la música, la robótica y el deporte. Estudié música durante 2 años, toco el
                 bajo, participé en competencias de robótica a lo largo de mi infancia y jugué al rugby durante casi 10 años.</p>
         </div>
-        <div class="section" id="habilidades">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>HTML, CSS, JavaScript, Bootstrap</li>
-                <li>Python, C#, C++</li>
-                <li>Gestión de Proyectos y Metodologías Ágiles</li>
-                <li>Trabajo en equipo y resolución de problemas</li>
-                <li>Testing y automatizaciones de QA</li>
-            </ul>
+
+        <div class="hyc">
+            <div class="section" id="habilidades">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript, Bootstrap</li>
+                    <li>Python, C#, C++</li>
+                    <li>Gestión de Proyectos y Metodologías Ágiles</li>
+                    <li>Trabajo en equipo y resolución de problemas</li>
+                    <li>Testing y automatizaciones de QA</li>
+                </ul>
+            </div>
+            <div class="section" id="contacto">
+                <h2>Contacto</h2>
+                <p>Email: <a href="mailto:diazvaldez.mateo@gmail.com">diazvaldez.mateo@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank">Mateo Díaz
+                        Valdez</a></p>
+                <p>GitHub: <a href="https://github.com/mateodiazvaldez" target="_blank">mateodiazvaldez</a></p>
+            </div>
         </div>
-        <div class="section" id="contacto">
-            <h2>Contacto</h2>
-            <p>Email: <a href="mailto:diazvaldez.mateo@gmail.com">diazvaldez.mateo@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/mateo-diaz-valdez-9a13b6314/" target="_blank">Mateo Díaz
-                    Valdez</a></p>
-            <p>GitHub: <a href="https://github.com/mateodiazvaldez" target="_blank">mateodiazvaldez</a></p>
-        </div>
+
     </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
